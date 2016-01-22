@@ -1,0 +1,48 @@
+
+%font--default {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+body {
+  @extend %font--default;
+
+  color: #{map-get($colors, text)};
+  font-size: 15px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Titles
+
+.title--section {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title--semi {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+// Text
+
+.text--with-label {
+  color: #{map-get($colors, text-light)};
+  font-size: 13px;
+
+  label {
+    display: inline-block;
+    min-width: 80px;
+    margin-right: 10px;
+  }
+
+  .value {
+    font-weight: bold;
+  }
+
+}

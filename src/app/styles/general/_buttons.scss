@@ -1,0 +1,39 @@
+
+%btn--reset {
+  @extend %font--default;
+
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.btn {
+  @extend %btn--reset;
+}
+
+.btn--vote {
+
+  @extend %reaction-active-pushdown;
+
+  @include border-radius(5px);
+  background-color: #{map-get($colors, primary)};
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+
+  display: block;
+
+  &.btn--vote--negative {
+    background-color: #{map-get($colors, anti-primary)};
+  }
+
+}

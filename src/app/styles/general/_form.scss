@@ -1,0 +1,14 @@
+
+%input--reset {
+  color: #{map-get($colors, text)};
+  font-size: 1em;
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.input {
+  @extend %input--reset;
+}
