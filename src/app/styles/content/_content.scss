@@ -1,9 +1,20 @@
 
-.content {}
+.content {
+  padding-bottom: 20px;
+}
 
   .content__header {
     display: flex;
+    position: relative;
   }
+
+    .content__header__voted-message {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
 
     .content__vote-options {
        display: flex;
@@ -19,7 +30,22 @@
       font-weight: 700;
       font-size: 16px;
       padding-top: 8px;
+
+      a {
+        @extend .anchor--hover;
+      }
+
     }
+
+  .content__bottom {
+    @include transition(transform 250ms ease);
+    position: relative;
+
+    .state--voted & {
+      transform: translate(0, 20px);
+    }
+
+  }
 
   .content__body {
     margin: 10px 0;
@@ -31,13 +57,71 @@
       //height: 400px;
       background-color: #E2EAEF;
       overflow: hidden;
+
+      > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
     }
 
+    .content__link,
+    .content__self-post {
+      @extend .text--general;
+      @include border-radius(5px);
+      padding: 15px;
+      background-color: #FAFCFD;
+      border: 1px solid #E9EBEC;
+    }
+
+    .content__self-post {
+
+      .more-link {
+        display: inline-block;
+        font-weight: bold;
+        margin-top: 10px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+      }
+
+    }
+
+    .content__link {
+      padding: 0;
+
+      > a {
+        @extend .clearfix;
+        display: block;
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+      .content__link__thumb {
+        float: left;
+        margin-right: 15px;
+      }
+
+      .content__link__info {
+        overflow: hidden;
+      }
+
+        .content__link__title {
+          @extend .anchor--hover;
+          font-weight: 700;
+        }
+
   .content__footer {
-    color: #BBC3D0;
+    color: #{map-get($colors, text-light)};
     display: flex;
     padding: 0 10px;
-    font-size: 14px;
+    font-size: 13px;
 
     a {
       font-weight: 700;

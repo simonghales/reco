@@ -15,6 +15,15 @@ a {
   text-decoration: none;
 }
 
+.anchor--hover {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
 // Titles
 
 .title--section {
@@ -45,4 +54,14 @@ a {
     font-weight: bold;
   }
 
+}
+
+.text--general {
+  color: #6E7680;
+  line-height: 1.3em;
+}
+
+.text--sml {
+  color: #{map-get($colors, text-medium)};
+  font-size: 13px;
 }

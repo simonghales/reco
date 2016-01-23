@@ -23,17 +23,45 @@
   @extend %reaction-active-pushdown;
 
   @include border-radius(5px);
-  background-color: #{map-get($colors, primary)};
-  color: #ffffff;
+  background-color: transparentize(map-get($colors, primary), 0.5);
   width: 32px;
   height: 32px;
   text-align: center;
-  line-height: 32px;
+  line-height: 30px;
+
+  background: none;
+  border: 1px solid #{map-get($colors, primary)};
+  color: #{map-get($colors, primary)};
 
   display: block;
 
+  &.state--ignored {
+    border-color: transparentize(map-get($colors, primary), 0.5);
+    color: transparentize(map-get($colors, primary), 0.5);
+  }
+
+  &.state--liked,
+  &:hover {
+    background-color: #{map-get($colors, primary)};
+    color: #ffffff;
+  }
+
   &.btn--vote--negative {
-    background-color: #{map-get($colors, anti-primary)};
+    background: none;
+    border-color: #{map-get($colors, anti-primary)};
+    color: #{map-get($colors, anti-primary)};
+
+    &.state--ignored {
+      border-color: transparentize(map-get($colors, anti-primary), 0.5);
+      color: transparentize(map-get($colors, anti-primary), 0.5);
+    }
+
+    &.state--liked,
+    &:hover {
+      background-color: #{map-get($colors, anti-primary)};
+      color: #ffffff;
+    }
+
   }
 
 }

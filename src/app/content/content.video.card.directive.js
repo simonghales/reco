@@ -3,15 +3,15 @@
 
   angular
     .module('reco.content.directives')
-    .directive('imagePostCard', imagePostCard);
+    .directive('videoCard', videoCard);
 
-  function imagePostCard() {
+  function videoCard() {
 
     var directive = {
       restrict: 'E',
       controller: 'ContentCardController',
       controllerAs: 'cardVM',
-      templateUrl: 'app/content/_content.image.post.card.html',
+      templateUrl: 'app/content/_content.video.card.html',
       replace: true,
       scope: false,
     }
