@@ -1,21 +1,25 @@
 <header class="content__header">
   <div class="content__vote-options">
-    <button ng-click="cardVM.toggleLike();"
-            ng-class="{
+    <div ng-click="cardVM.toggleLike();" class="option-wrapper">
+      <button
+              ng-class="{
               'state--liked': cardVM.states.liked,
               'state--ignored': cardVM.states.disliked
             }"
-            class="btn btn--vote option" title="more like this">
-      <span class="icon icon-thumbs-up-alt"></span>
-    </button>
-    <button ng-click="cardVM.toggleDislike();"
-            ng-class="{
+              class="btn btn--vote option" title="more like this">
+        <span class="icon icon-thumbs-up-alt"></span>
+      </button>
+    </div>
+    <div ng-click="cardVM.toggleDislike();" class="option-wrapper">
+      <button
+              ng-class="{
               'state--liked': cardVM.states.disliked,
               'state--ignored': cardVM.states.liked
             }"
-            class="btn btn--vote btn--vote--negative option" title="less like this">
-      <span class="icon icon-thumbs-down-alt"></span>
-    </button>
+              class="btn btn--vote btn--vote--negative option" title="less like this">
+        <span class="icon icon-thumbs-down-alt"></span>
+      </button>
+    </div>
   </div>
   <div>
     <h3 class="content__title"><a href="">Blue Black Water - BILLY WHO</a></h3>

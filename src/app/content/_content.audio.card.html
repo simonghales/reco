@@ -1,4 +1,7 @@
-<div class="content content--image-post">
+<div ng-class="{
+      'state--voted': (cardVM.states.liked || cardVM.states.disliked)
+     }"
+     class="content content--image-post">
   <card-header></card-header>
   <div class="content__bottom">
     <div class="content__body">

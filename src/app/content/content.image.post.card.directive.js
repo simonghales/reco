@@ -13,7 +13,7 @@
       controllerAs: 'cardVM',
       templateUrl: 'app/content/_content.image.post.card.html',
       replace: true,
-      scope: false,
+      scope: {}
     }
 
     return directive;
