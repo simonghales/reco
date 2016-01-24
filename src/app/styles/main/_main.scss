@@ -1,17 +1,17 @@
 .main {
   display: flex;
 
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
   .main__left,
   .main__right {
     @include border-radius(3px);
 
-    width: 240px;
+    width: 296px;
     height: 700px;
-    background-color: #E9EAEA;
+    background-color: #{map_get($colors, shade-faint)};
     flex: 0 0 auto;
   }
 
@@ -22,7 +22,9 @@
   .main__centre {
     //flex-grow: 1;
     flex: 1 1 auto;
-    margin: 0 50px;
+    //margin: 0 50px;
+    margin-right: 50px;
+    width: 854px;
 
     .content {
       margin-bottom: 50px;

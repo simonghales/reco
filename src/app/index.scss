@@ -18,12 +18,18 @@
 
 @import "styles/general/page";
 
+@import "styles/header/header";
+
 @import "styles/general/header";
 @import "styles/general/home";
 
 @import "styles/main/main";
 
 @import "styles/content/content";
+
+@import "styles/post/post";
+
+@import "styles/comments/comments";
 
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
    all your sass files automatically */

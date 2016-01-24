@@ -4,7 +4,9 @@
   angular
     .module('reco', [
 
+      'reco.general',
       'reco.content',
+      'reco.post',
 
       'ngAnimate',
       'ngSanitize',
@@ -12,6 +14,16 @@
       'ui.router',
       'toastr'
     ]);
+
+  // General
+
+  angular.module('reco.general', [
+    'reco.general.controllers',
+    'reco.general.directives'
+  ]);
+
+  angular.module('reco.general.controllers', []);
+  angular.module('reco.general.directives', []);
 
   // Content
 
@@ -22,6 +34,16 @@
 
   angular.module('reco.content.controllers', []);
   angular.module('reco.content.directives', []);
+
+  // Post
+
+  angular.module('reco.post', [
+    'reco.post.controllers',
+    'reco.post.directives'
+  ]);
+
+  angular.module('reco.post.controllers', []);
+  angular.module('reco.post.directives', []);
 
 
 })();

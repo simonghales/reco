@@ -22,9 +22,10 @@
     </div>
   </div>
   <div>
-    <h3 class="content__title"><a href="">Blue Black Water - BILLY WHO</a></h3>
+    <h3 class="content__title"><a href="#/post">Blue Black Water - BILLY WHO</a></h3>
   </div>
   <div class="content__header__voted-message">
-    <p class="text--sml">You liked this, so we'll start serving you more content like this.</p>
+    <p ng-show="cardVM.states.liked" class="text--sml">You <strong>liked</strong> this, so we'll start serving you more content like this.</p>
+    <p ng-show="cardVM.states.disliked" class="text--sml">You <strong>disliked</strong> this, so we'll try to avoid serving up content like this.</p>
   </div>
 </header>
