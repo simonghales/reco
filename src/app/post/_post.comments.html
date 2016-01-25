@@ -1,10 +1,11 @@
 <section class="comments">
-  <section>
-    <textarea></textarea>
-  </section>
-  <section class="comments__list">
-    <div class="comment">
-      comment
+  <form class="comments__form">
+    <div class="comments__form__input-wrapper">
+      <textarea class="comments__form__input textarea--plain" placeholder="Enter a comment"></textarea>
     </div>
+    <button class="comments__form__post btn btn--submit state--disabled">Post</button>
+  </form>
+  <section class="comments__list">
+    <comment ng-repeat="comment in postVM.data.comments"></comment>
   </section>
 </section>

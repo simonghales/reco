@@ -131,6 +131,7 @@
     font-size: 13px;
 
     a {
+      color: #{map-get($colors, anchor)};
       font-weight: 700;
 
       &:hover {

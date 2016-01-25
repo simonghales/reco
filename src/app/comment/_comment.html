@@ -1,0 +1,23 @@
+<div class="comment-wrapper">
+  <div class="comment">
+    <header class="comment__header">
+      <a class="title--medium comment__poster-name" href="">simonghales</a>
+    </header>
+    <div class="comment__body">
+      <p class="text--comment" ng-bind="::comment.text"></p>
+    </div>
+    <footer class="comment__footer">
+      <a href="">reply</a>
+      <a href="">report</a>
+    </footer>
+  </div>
+  <form class="comments__form">
+    <div class="comments__form__input-wrapper">
+      <textarea class="comments__form__input textarea--plain" placeholder="Enter a comment"></textarea>
+    </div>
+    <button class="comments__form__post btn btn--submit state--disabled">Post</button>
+  </form>
+  <div class="comment__replies">
+    <comment ng-repeat="comment in comment.replies"></comment>
+  </div>
+</div>

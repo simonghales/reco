@@ -7,6 +7,7 @@
       'reco.general',
       'reco.content',
       'reco.post',
+      'reco.comment',
 
       'ngAnimate',
       'ngSanitize',
@@ -44,6 +45,16 @@
 
   angular.module('reco.post.controllers', []);
   angular.module('reco.post.directives', []);
+
+  // Comment
+
+  angular.module('reco.comment', [
+    'reco.comment.controllers',
+    'reco.comment.directives'
+  ]);
+
+  angular.module('reco.comment.controllers', []);
+  angular.module('reco.comment.directives', []);
 
 
 })();

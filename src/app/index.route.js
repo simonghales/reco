@@ -20,6 +20,8 @@
       .state('main.post', {
         url: 'post',
         templateUrl: '/app/post/_post.html',
+        controller: 'PostController',
+        controllerAs: 'postVM'
       });
 
     $urlRouterProvider.otherwise('/');

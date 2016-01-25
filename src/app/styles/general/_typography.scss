@@ -30,6 +30,11 @@ strong {
 
 // Titles
 
+.title--medium {
+  color: #{map-get($colors, anchor)};
+  font-weight: 700;
+}
+
 .title--section {
   font-size: 18px;
   font-weight: bold;
@@ -73,4 +78,9 @@ strong {
 .text--sml {
   color: #{map-get($colors, text-medium)};
   font-size: 13px;
+}
+
+.text--comment {
+  line-height: 19px;
+  max-width: 680px;
 }

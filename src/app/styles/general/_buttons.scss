@@ -65,3 +65,16 @@
   }
 
 }
+
+.btn--submit {
+  @include border-radius(3px);
+  background-color: #D1E2EF;
+  color: #93B6CE;
+  font-weight: 700;
+  padding: 4px 8px;
+  
+  &.state--disabled {
+    cursor: default;
+  }
+  
+}
