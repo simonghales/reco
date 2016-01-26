@@ -12,6 +12,14 @@
 
   }
 
+.comment-wrapper {
+
+  .comments__form {
+    margin-top: 15px;
+  }
+
+}
+
 .comment {}
 
   .comment__header,
@@ -21,9 +29,59 @@
 
   .comment__header {}
 
+    .comment__header__bit {
+      margin-right: 3px;
+    }
+
     .comment__poster-name {
       @extend .anchor--hover;
     }
+
+    .comment__points {
+      color: #BFC4CA;
+    }
+
+    .comment__when {
+      color: #d0d0d0;
+    }
+
+    .comment__when,
+    .comment__points {
+      display: inline-block;
+    }
+
+    .comment__points {
+      font-weight: 700;
+    }
+
+    .comment__vote-options {
+    }
+
+      .comment__vote-option {
+        color: #BFC4CA;
+        cursor: pointer;
+
+        &:hover {
+          color: #{map_get($colors, anchor)};
+        }
+
+      }
+
+      .comment__vote-option--pos {
+
+        &.state--active {
+          color: #{map_get($colors, primary)};
+        }
+
+      }
+
+      .comment__vote-option--neg {
+
+        &.state--active {
+          color: #{map_get($colors, anti-primary)};
+        }
+
+      }
 
   .comment__body {
     margin: 8px 0;

@@ -1,9 +1,13 @@
 <section class="comments">
   <form class="comments__form">
     <div class="comments__form__input-wrapper">
-      <textarea class="comments__form__input textarea--plain" placeholder="Enter a comment"></textarea>
+      <textarea ng-model="postVM.models.comment"
+                class="comments__form__input textarea--plain" placeholder="Enter a comment"></textarea>
     </div>
-    <button class="comments__form__post btn btn--submit state--disabled">Post</button>
+    <button ng-class="{
+              'state--disabled': !postVM.models.comment
+            }"
+            class="comments__form__post btn btn--submit">Post</button>
   </form>
   <section class="comments__list">
     <comment ng-repeat="comment in postVM.data.comments"></comment>

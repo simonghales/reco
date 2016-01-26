@@ -22,6 +22,12 @@
         templateUrl: '/app/post/_post.html',
         controller: 'PostController',
         controllerAs: 'postVM'
+      })
+      .state('main.submit', {
+        url: 'submit',
+        templateUrl: '/app/post/_post.submit.html',
+        //controller: 'PostController',
+        //controllerAs: 'postVM'
       });
 
     $urlRouterProvider.otherwise('/');

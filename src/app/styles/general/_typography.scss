@@ -13,6 +13,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+
+  &[ng-click] {
+    cursor: pointer;
+  }
+
 }
 
 .anchor--hover {
@@ -50,6 +55,16 @@ strong {
 .title--site {
   font-weight: 900;
   font-size: 24px;
+}
+
+.title--page {
+  color: #{map_get($colors, text-medium)};
+  font-size: 26px;
+
+  span {
+    color: #{map_get($colors, text-light)};
+  }
+
 }
 
 // Text

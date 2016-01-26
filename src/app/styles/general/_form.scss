@@ -26,4 +26,54 @@
     border-color: #{map_get($colors, primary)};
   }
 
+  @include placeholder {
+    color: #{map_get($colors, text-light)};
+  }
+
+}
+
+.form--shaded {
+  @include border-radius(5px);
+  background-color: #{map_get($colors, shade-faint)};
+  margin-top: 15px;
+  padding: 30px;
+
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  .form__section {
+    margin-top: 30px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+  }
+
+}
+
+.input--shaded {
+  @include border-radius(3px);
+  border: 1px solid #CDD9E2;
+  padding: 10px;
+
+  &:focus {
+    border-color: #{map_get($colors, primary)};
+  }
+
+  @include placeholder {
+    color: #{map_get($colors, text-light)};
+  }
+
+}
+
+textarea {
+
+  &.input--shaded {
+    min-height: 160px;
+    max-width: 100%;
+  }
+
 }

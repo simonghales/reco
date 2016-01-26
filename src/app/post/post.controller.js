@@ -56,6 +56,10 @@
       ]
     };
 
+    vm.models = {
+      comment: ''
+    };
+
     _activate();
 
     function _activate() {
